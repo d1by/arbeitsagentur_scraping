@@ -226,26 +226,6 @@ def extract_data(driver=driver, links=[]):
             website = get_text(path = '//*[@id="detail-anbieter-homepage"]/dd/a')
             print("Searching for remarks... ")
             remarks = get_text(path = '//*[@id="detail_dauer_termine"]/dd[6]/p')
-            # start_date = driver.find_element(By.XPATH, '//*[@id="detail_termin_marg"]/dd[1]/font/font').text
-            # end_date = driver.find_element(By.XPATH, '//*[@id="detail_termin_marg"]/dd[2]/font/font').text
-            # duration = driver.find_element(By.XPATH, '//*[@id="detail_termin_marg"]/dd[3]/ba-bub-chip/div/div[2]/font/font').text
-            # cost = driver.find_element(By.XPATH, '//*[@id="detail_kosten_gebuehren"]/dd[1]').text
-            # req = driver.find_element(By.XPATH, '//*[@id="detail_zuganginfo"]/dd[1]/ul').text
-            # ongoing = driver.find_element(By.XPATH, '//*[@id="detail_termin_marg"]/dd[4]/font/font').text
-            # class_time = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_uzeit"]/ba-bub-chip/div/div[2]/font/font').text
-            # job_acc = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_berufsbegleitend"]/font/font').text
-            # form_of_learning = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_uform"]/ba-bub-chip/div/div[2]/font/font').text
-            # practical_exp = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_praxisanteile"]/font/font').text
-            # grad_type = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_abschlussart"]/p/font/font').text
-            # grad_name = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_abschlussbez"]/p').text
-            # course_link = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_abschlussbez"]/p').text
-            # course_provider = driver.find_element(By.XPATH, '//*[@id="detail-anbieter-name"]/dd/font/font').text
-            # school_type = driver.find_element(By.XPATH, '//*[@id="_marg_wbinfo_schulart"]/font/font').text
-            # address = driver.find_element(By.XPATH, '//*[@id="detail-anbieter-strasse"]/dd/address').text
-            # phone = driver.find_element(By.XPATH, '//*[@id="detail-anbieter-telefon"]/dd/font/font').text
-            # email = driver.find_element(By.XPATH, '//*[@id="detail-anbieter-email"]/dd/font/font').text
-            # website = driver.find_element(By.XPTH, '//*[@id="detail-anbieter-homepage"]/dd/a/font/font').text
-            # remarks = driver.find_element(By.XPATH, '//*[@id="detail_dauer_termine"]/dd[6]/p').text
 
             entry_list = [title, start_date, end_date, duration,
                         cost, req, ongoing,
