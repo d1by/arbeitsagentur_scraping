@@ -42,14 +42,15 @@ https://www.arbeitsagentur.de/kursnet this is correct URL, I case if you click o
 
 </details>
 
-<details>
+<details>  
 <summary> Demo </summary>
-Terminal: 
+
+#### Terminal: 
 
 ![image](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/9ece7b01-7e1b-43de-af97-840ee4a9f63a)
 ![image](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/d1ddd905-b426-43e9-9b41-de1a9ccece0b)
 
-CSV:
+#### CSV:
 <body>
   <table>
       <thead>
