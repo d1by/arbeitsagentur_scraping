@@ -40,5 +40,69 @@ As first step I need you to extract the structure of these advertisement from th
 Points to remember: 
 https://www.arbeitsagentur.de/kursnet this is correct URL, I case if you click or navigate to home page the url changes to ‘https://www.arbeitsagentur.de’ that’s not correct.
 
+</details>
+
+<details>
+<summary> Demo </summary>
+Terminal: 
+
+![image](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/9ece7b01-7e1b-43de-af97-840ee4a9f63a)
+![image](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/d1ddd905-b426-43e9-9b41-de1a9ccece0b)
+
+CSV:
+<body>
+  <table>
+      <thead>
+          <tr>
+              <th>Title</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Duration</th>
+              <th>Cost</th>
+              <th>Requirements</th>
+              <th>Ongoing Entry</th>
+              <th>Class Time</th>
+              <th>Job Accompanying</th>
+              <th>Form of Learning</th>
+              <th>Practical Experience</th>
+              <th>Graduation Form</th>
+              <th>Graduation Name</th>
+              <th>Link</th>
+              <th>Provider</th>
+              <th>Type of School</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Website</th>
+              <th>Remarks</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Programmieren mit Python</td>
+              <td>27.11.2023</td>
+              <td>27.12.2023</td>
+              <td>1 Monat</td>
+              <td>1.000 - 5.000 EUR</td>
+              <td>Mind. 2-jährige Berufsausbildung oder 3 Jahre Berufserfahrung Geübt im Umgang mit Laptop, iPad, PC, sowie der Nutzung des Internets MS Office Grundkenntnisse</td>
+              <td>ja</td>
+              <td>Vollzeit</td>
+              <td>Nein</td>
+              <td>Blended Learning</td>
+              <td>Nein</td>
+              <td>Zertifikat der IU Akademie</td>
+              <td>Programmieren mit Python</td>
+              <td><a href="https://www.iu-akademie.de/short/n_85/" target="_blank">https://www.iu-akademie.de/short/n_85/</a></td>
+              <td>Internationale Hochschule</td>
+              <td>Private Hochschule</td>
+              <td>Juri-Gagarin-Ring 152 99084 Erfurt Thüringen</td>
+              <td>030 / 22027281</td>
+              <td>info@iu-akademie.de</td>
+              <td><a href="https://www.iu-akademie.de/" target="_blank">https://www.iu-akademie.de/</a></td>
+              <td>Für weitere Informationen zu unserer Weiterbildung, kann gerne ein persönlicher Beratungstermin vereinbart werden</td>
+          </tr>
+      </tbody>
+  </table>
+</body>
 
 </details>
