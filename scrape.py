@@ -246,7 +246,7 @@ def extract_data(driver=driver, links=[]):
     # print(f"reached {driver.current_url}")
 
 def get_text(driver=driver, path=''):
-    for i in range(3):
+    for _ in range(3):
         try:
             txt_ls = WebDriverWait(driver, 10).until(
                 EC.presence_of_all_elements_located((By.XPATH, path))
@@ -260,7 +260,7 @@ def get_text(driver=driver, path=''):
             break
         except Exception as e:
             txt = "N/A"
-            print(f"Retrying... ({i+1}/3)")
+            # print(f"Retrying... ({i+1}/3)")
             driver.refresh()
             pass
     
