@@ -9,4 +9,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=00:10:00
 
-python3 scrape.py
+arg1 = $1
+arg2 = $2
+
+python3 scrape.py $arg1 $arg2
