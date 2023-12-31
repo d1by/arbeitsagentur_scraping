@@ -46,13 +46,15 @@ https://www.arbeitsagentur.de/kursnet this is correct URL, I case if you click o
 
 </details>
 
-<details>  
-<summary> Demo </summary>
+# Demo
 
-##### Terminal: 
+##### *With* SLURM:
+![image](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/494d4fbd-8eee-4dd8-9696-a9fff1bfe8f1)
 
-![image](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/9ece7b01-7e1b-43de-af97-840ee4a9f63a)
-![image](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/d1ddd905-b426-43e9-9b41-de1a9ccece0b)
+##### *Without* SLURM: 
+
+<img src="https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/9ece7b01-7e1b-43de-af97-840ee4a9f63a" width="750">
+<img src = "https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/d1ddd905-b426-43e9-9b41-de1a9ccece0b" width ="750">
 
 ##### CSV:
 <body>
@@ -109,5 +111,3 @@ https://www.arbeitsagentur.de/kursnet this is correct URL, I case if you click o
       </tbody>
   </table>
 </body>
-
-</details>
