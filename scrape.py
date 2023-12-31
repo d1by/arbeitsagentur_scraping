@@ -15,6 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import re
 import csv
+import sys
 
 options = FirefoxOptions()
 
@@ -269,8 +270,15 @@ def get_text(driver=driver, path=''):
 def initialize():
     global search_term
     global num_of_res
-    search_term = input("Enter search term: ")
-    num_of_res = int(input("Enter number of results: "))
+
+    if(len(sys.argv)>1):
+        search_term = sys.argv[1]
+        num_of_res = sys.argv[2]
+
+        print("Received arguments from terminal.")
+    else:
+        search_term = input("Enter search term: ")
+        num_of_res = int(input("Enter number of results: "))
 
     with open("edu_data.csv", 'w', newline='') as file:
         writer = csv.writer(file)
