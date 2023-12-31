@@ -1,10 +1,10 @@
 # Arbeitsagentur - Scraping
 
-###### Requires Selenium with Firefox WebDrivers.
-###### An additional SLURM script is included. Installation and instructions can be found within the README of [this linked repo](https://github.com/d1by/slurm-workflow?tab=readme-ov-file#instructions)
+###### Uses Selenium (on Python 3) with Firefox WebDrivers.
+###### SLURM is running on version 20.11.9, installation script is provided.
 
 <details>
-  <summary> Problem Statement </summary> 
+  <summary> Problem Statement (expand) </summary> 
   
 ###### Translated from German
 The Bundesagentur's (BA) offer is the best structured: https://www.arbeitsagentur.de/kursnet
@@ -45,6 +45,31 @@ Points to remember:
 https://www.arbeitsagentur.de/kursnet this is correct URL, I case if you click or navigate to home page the url changes to ‘https://www.arbeitsagentur.de’ that’s not correct.
 
 </details>
+
+# Installation
+1) Install Python
+- https://www.python.org/downloads/
+2) Install Selenium
+- ```$ pip3 install selenium```
+3) Install Firefox
+- https://www.mozilla.org/en-US/firefox/new/
+4) Install SLURM
+- ```$ sh SLURM_Ubuntu_installation.sh```
+
+# Execution
+1) Start SLURM controller
+- ```$ sudo slurmctld```
+2) Start SLURM daemon
+- ```$ sudo slurmd```
+3) Check SLURM status
+- ```$ scontrol ping```
+- output should look like this: ```Slurmctld(primary) at diby-linux is UP```
+4) Check node status
+- ```$ sinfo```
+- node state should be ```idle```
+5) Submit job (python script)
+- ```$ sbatch slurm_scrape.py <search_term> <number_of_results>```
+- eg. ```$ sbatch slurm_scrape.py Computer Science 30```
 
 # Demo
 
