@@ -3,8 +3,9 @@
 ###### Uses Selenium (on Python 3) with Firefox WebDrivers.
 ###### SLURM is running on version 20.11.9, installation script is provided.
 
+## Problem Statement
 <details>
-  <summary> Problem Statement (expand) </summary> 
+  <summary> (expand) </summary> 
   
 ###### Translated from German
 The Bundesagentur's (BA) offer is the best structured: https://www.arbeitsagentur.de/kursnet
