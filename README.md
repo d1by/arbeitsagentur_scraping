@@ -69,8 +69,8 @@ https://www.arbeitsagentur.de/kursnet this is correct URL, I case if you click o
 - ```$ sinfo```
 - node state should be ```idle```
 5) Submit job (python script)
-- ```$ sbatch slurm_scrape.py <search_term> <number_of_results>```
-- eg. ```$ sbatch slurm_scrape.py Computer Science 30```
+- ```$ sbatch slurm_scrape.sh <search_term> <number_of_results>```
+- eg. ```$ sbatch slurm_scrape.sh Computer Science 30```
 
 # Demo
 
