@@ -47,6 +47,10 @@ https://www.arbeitsagentur.de/kursnet this is correct URL, I case if you click o
 
 </details>
 
+###### Diagram
+  
+![diag1](https://github.com/d1by/arbeitsagentur_scraping/assets/108338649/d42f7cd8-f6bf-43fe-929a-1a9ef3791375)
+
 # Installation
 1) Install Python
 - https://www.python.org/downloads/
