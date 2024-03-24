@@ -3,6 +3,10 @@
 search_term = "Computer Science"
 num_of_res = 30
 ##########################
+# modify based on network capabilities
+# (for slower internet connections, use a higher wait time)
+wait_time = 3 # e.g. 3 -> 30 seconds
+##########################
 
 
 from selenium import webdriver
@@ -136,6 +140,7 @@ def main():
         )
 
         links = []
+        find_count = res_count
         for elem in elems: 
             link = elem.get_attribute("href") 
             # print(link)
@@ -143,6 +148,10 @@ def main():
             if(re.search(".*/angebot/([0-9]+).*", link)):
                 print("FOUND: ", link)
                 links.append(link)
+
+                find_count+=1
+                if(find_count > num_of_res):
+                    break
 
         extract_data(driver, links)
         if(res_count == num_of_res):
@@ -247,7 +256,7 @@ def extract_data(driver=driver, links=[]):
     # print(f"reached {driver.current_url}")
 
 def get_text(driver=driver, path=''):
-    for _ in range(3):
+    for _ in range(wait_time):
         try:
             txt_ls = WebDriverWait(driver, 10).until(
                 EC.presence_of_all_elements_located((By.XPATH, path))
@@ -273,7 +282,7 @@ def initialize():
 
     if(len(sys.argv)>1):
         search_term = sys.argv[1]
-        num_of_res = sys.argv[2]
+        num_of_res = int(sys.argv[2])
 
         print("Received arguments from terminal.")
     else:
