@@ -2,6 +2,7 @@
 # Default values (for tests): 
 search_term = "Computer Science"
 num_of_res = 30
+file_name = "edu_data.csv"
 ##########################
 # modify based on network capabilities
 # (for slower internet connections, use a higher wait time)
@@ -11,6 +12,7 @@ wait_time = 3 # e.g. 3 -> 30 seconds
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
+# from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -22,11 +24,13 @@ import csv
 import sys
 
 options = FirefoxOptions()
+# service = FirefoxService(executable_path="/snap/bin/geckodriver")
 
 # TO DO: allow user to choose between gui and headless modes
 options.add_argument("--headless")
 
 driver = webdriver.Firefox(options=options)
+# driver = webdriver.Firefox(options=options, service=service)
 driver.implicitly_wait(30)
 
 # driver.get("https://google.com/")
@@ -146,11 +150,14 @@ def main():
             # print(link)
             # example: //*[@id="angebot_207798330_link"]
             if(re.search(".*/angebot/([0-9]+).*", link)):
+                if(link in links):
+                    continue
+
                 print("FOUND: ", link)
                 links.append(link)
 
                 find_count+=1
-                if(find_count > num_of_res):
+                if(find_count >= num_of_res):
                     break
 
         extract_data(driver, links)
@@ -206,7 +213,7 @@ def extract_data(driver=driver, links=[]):
         #         driver.refresh()
         #         pass
 
-        with open('edu_data.csv', 'a', newline='') as file:
+        with open(file_name, 'a', newline='') as file:
             writer = csv.writer(file)
             
             print("Searching for title... ")
@@ -279,6 +286,7 @@ def get_text(driver=driver, path=''):
 def initialize():
     global search_term
     global num_of_res
+    global file_name
 
     if(len(sys.argv)>1):
         search_term = sys.argv[1]
@@ -289,7 +297,17 @@ def initialize():
         search_term = input("Enter search term: ")
         num_of_res = int(input("Enter number of results: "))
 
-    with open("edu_data.csv", 'w', newline='') as file:
+    i = 0
+    while True:
+        try:
+            _ = open(f"edu_data({i}).csv", 'r')
+        except:
+            break
+        i+=1
+
+    file_name = f"edu_data({i}).csv"
+
+    with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file)
         field = ["Title",
                 "Start Date",
@@ -313,7 +331,7 @@ def initialize():
                 "Website",
                 "Remarks"
         ]
-
+        writer.writerow(search_term)
         writer.writerow(field)
 
 if __name__ == "__main__":
